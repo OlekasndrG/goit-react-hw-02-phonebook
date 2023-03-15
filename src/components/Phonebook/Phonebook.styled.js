@@ -3,10 +3,12 @@ import styled from 'styled-components';
 export const FormContainer = styled.form`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 320px;
   gap: 15px;
   outline: 1px solid black;
-  padding-left: 15px;
+  padding: 15px 0;
 
   button {
     display: inline-block;
@@ -37,7 +39,9 @@ export const FormContainer = styled.form`
     font-weight: 600;
     display: block;
     outline: none;
-    &:hover, :active, :focus {
+    &:hover,
+    :active,
+    :focus {
       border: 2px solid blue;
       border-radius: 6px;
     }

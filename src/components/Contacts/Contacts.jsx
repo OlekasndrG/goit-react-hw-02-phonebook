@@ -10,7 +10,7 @@ const ContactList = ({ contacts, onDeleteClick }) => {
       {contacts.map(contact => {
         return (
           <li key={contact.id}>
-            {contact.name} :  {contact.number}
+            {contact.name} : {contact.number}
             <button type="button" onClick={() => onDeleteClick(contact.id)}>
               Delete
             </button>
@@ -24,12 +24,12 @@ const ContactList = ({ contacts, onDeleteClick }) => {
 ContactList.propTypes = {
   contacts: PropTypes.arrayOf(
     PropTypes.shape({
-      number: PropTypes.string,
-      name: PropTypes.string,
+      number: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
       id: PropTypes.string.isRequired,
     })
   ),
-  onDeleteClick: PropTypes.func
+  onDeleteClick: PropTypes.func.isRequired,
 };
 
 export default ContactList;
